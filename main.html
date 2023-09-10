@@ -16,16 +16,20 @@
 			}
 			arr.sort();
 			
-			return arr[n-2];
+			for(let i=arr.length-2;i>=0;i--){
+				if(arr[i] != arr[arr.length-1]){
+					return arr[i];
+				}
+			}
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			// var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			// alert(secondHighest(arr));
 		}
 		Main();
 	</script>
